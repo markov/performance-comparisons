@@ -1,16 +1,17 @@
-nonAbiChange {
-  tasks = ["compileJava"]
-  apply-non-abi-change-to = "project1/src/main/java/org/gradle/test/performance1_4/Production1_315.java"
-  maven {
-    targets = ["clean", "compile"]
-  }
-}
-
-abiChange {
-  tasks = ["compileJava"]
+# Scenarios are run in alphabetical order - we will clean in between.
+Java_ABI_Change {
+  versions = ["4.4.1"]
+  tasks = ["assemble"]
   apply-abi-change-to = "project1/src/main/java/org/gradle/test/performance1_4/Production1_315.java"
-  maven {
-    targets = ["clean", "compile"]
-  }
+}
+Java_Clean {
+  versions = ["4.4.1"]
+  tasks = ["clean"]
+  warm-ups = 0
+}
+Java_Non_ABI_Change {
+  versions = ["4.4.1"]
+  tasks = ["assemble"]
+  apply-non-abi-change-to = "project1/src/main/java/org/gradle/test/performance1_4/Production1_315.java"
 }
 
