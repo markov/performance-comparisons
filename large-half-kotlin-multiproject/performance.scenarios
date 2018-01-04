@@ -1,0 +1,17 @@
+# Scenarios are run in alphabetical order - we will clean in between.
+Kotlin_ABI_Change_Multi_Module {
+  versions = ["4.4.1"]
+  tasks = ["assemble"]
+  apply-abi-change-to-kotlin-multi = "project1/src/main/java/org/gradle/test/performance1_4/Production1_315.kt"
+}
+Kotlin_Clean {
+  versions = ["4.4.1"]
+  tasks = ["clean"]
+  warm-ups = 0
+}
+Kotlin_Non_ABI_Change_Multi_Module {
+  versions = ["4.4.1"]
+  tasks = ["assemble"]
+  apply-non-abi-change-to-kotlin-multi = "project1/src/main/java/org/gradle/test/performance1_4/Production1_315.kt"
+}
+

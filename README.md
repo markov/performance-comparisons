@@ -10,7 +10,5 @@ Follow the instructions required to install the [Gradle profiler](https://github
 
 - A [single, large project](single-large-project)
 - A [single, large project, 50% kotlin files](single-large-half-kotlin-project)
-- A [single, large project, 100% kotlin files](single-large-kotlin-project)
 - A [large multi-project build](large-multiproject)
 - A [large 50% kotlin multi-project build](large-half-kotlin-multiproject)
-- A [large 100% kotlin multi-project build](large-kotlin-multiproject)

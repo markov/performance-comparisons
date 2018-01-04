@@ -1,0 +1,10 @@
+package org.gradle.test.performance5_4
+
+open class Production5_337 : org.gradle.test.performance1_4.Production1_337() {
+    override val property: String
+
+    init {
+        this.property = "foo"
+    }
+
+}

@@ -1,0 +1,12 @@
+package org.gradle.test.performance14_4
+
+import org.junit.Assert.*
+
+class Test14_312 {
+    private val production = Production14_312("value")
+
+    @org.junit.Test
+    fun test() {
+        assertEquals(production.property, "value")
+    }
+}
