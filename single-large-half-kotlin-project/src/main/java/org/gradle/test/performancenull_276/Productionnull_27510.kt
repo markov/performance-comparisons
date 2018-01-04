@@ -1,0 +1,9 @@
+package org.gradle.test.performancenull_276
+
+class Productionnull_27510(val property: String) {
+
+    var prop0: String? = null
+
+    var prop1: String? = null
+
+}

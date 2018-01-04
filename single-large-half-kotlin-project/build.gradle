@@ -1,16 +1,14 @@
-// Generated 23a8f06d-f447-4e85-ac10-18a8342a4ed5
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.10"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 repositories {
-
     mavenCentral()
 }
-
-
-
-
 
 dependencies {
     compile 'commons-lang:commons-lang:2.5'
@@ -43,8 +41,6 @@ task dependencyReport(type: DependencyReportTask) {
     outputs.upToDateWhen { false }
     outputFile = new File(buildDir, "dependencies.txt")
 }
-
-import org.gradle.util.GradleVersion
 
 if (GradleVersion.current() > GradleVersion.version('3.3')) {
    println "Enabling incremental compiler"

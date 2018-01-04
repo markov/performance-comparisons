@@ -1,16 +1,16 @@
 # Scenarios are run in alphabetical order - we will clean in between.
-Java_ABI_Change_Single_Module {
+Kotlin_ABI_Change_Single_Module {
   versions = ["4.4.1"]
   tasks = ["assemble"]
-  apply-abi-change-to = "src/main/java/org/gradle/test/performancenull_458/Productionnull_45800.java"
+  apply-abi-change-to-kotlin-single = "src/main/java/org/gradle/test/performancenull_458/Productionnull_45800.kt"
 }
-Java_Clean {
+Kotlin_Clean {
   versions = ["4.4.1"]
   tasks = ["clean"]
   warm-ups = 0
 }
-Java_Non_ABI_Change_Single_Module {
+Kotlin_Non_ABI_Change_Single_Module {
   versions = ["4.4.1"]
   tasks = ["assemble"]
-  apply-non-abi-change-to = "src/main/java/org/gradle/test/performancenull_458/Productionnull_45800.java"
+  apply-non-abi-change-to-kotlin-single = "src/main/java/org/gradle/test/performancenull_458/Productionnull_45800.kt"
 }
